@@ -21,16 +21,16 @@ jobs:
 
     - name: Clear npm cache
       run: npm cache clean --force
-      working-directory: CICD
+      working-directory: .
 
     - name: Install dependencies
       run: npm install
-      working-directory: CICD
+      working-directory: .
 
     - name: Fix Jest permissions
       run: chmod +x node_modules/.bin/jest
-      working-directory: CICD
-
+      working-directory: . 
+      
     - name: Run tests
       run: npm test
-      working-directory: CICD
+      working-directory: .
