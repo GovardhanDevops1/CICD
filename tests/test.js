@@ -1,4 +1,6 @@
 const add = require('../src/index');
-if (add(2, 3) !== 5) {
-  throw new Error('Test failed');
-}
+
+test('adds 2 and 3 to equal 5', () => {
+  expect(add(2, 3)).toBe(5);
+});
+
